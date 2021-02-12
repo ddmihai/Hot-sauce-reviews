@@ -173,8 +173,8 @@ exports.likeSauce = (req, res, next) => {
     // get the body
    const body          = req.body;
   // get the arrays of users
-  let usersLiked      = [];
-  let usersDisliked   = [];
+  let usersLiked      = new Array;
+  let usersDisliked   = new Array;
                  
   let likes = 0;
   let dislikes = 0;
