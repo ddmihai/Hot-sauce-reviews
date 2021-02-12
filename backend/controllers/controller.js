@@ -179,14 +179,7 @@ exports.likeSauce = (req, res, next) => {
   let likes = 0;
   let dislikes = 0;
 
-if (body.like == 1) {
-      likes += 1;
-      usersLiked.push(body.userId);
-    }
-if (body.like == -1) {
-    dislikes += 1;
-    usersDisliked.push(body.userId);
-}
+    
 
 
     const sauce = new Sauce({
