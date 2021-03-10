@@ -9,12 +9,20 @@ const sauce = new mongoose.Schema({
     manufacturer: {type: String, required: true},
     description: {type: String, required: true},
     mainPepper: {type: String, required: true},
-    imageUrl: {type: String, required: true},
+    imageUrl: {type: String, required: false},
     heat: {type: Number, required: true},
     likes: {type: Number, required: false, default: 0},
-    dislikes: {type: Number, required: false, default: 0},
-    usersLiked: {type: Array, required: false, typeof: undefined},
-    usersDisliked: {type: Array, required: false}
+    dislikes: {type: Number, required: false, default: 0}, 
+    usersLiked:     [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'User',
+            required: false
+    }],
+    usersDisliked:  [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'User',
+            required: false
+    }]
 });
 
 
