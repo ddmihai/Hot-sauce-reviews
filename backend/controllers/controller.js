@@ -157,14 +157,12 @@ exports.update = (req, res, next) => {
       
       sauce = {
         _id:          req.params.id,
-        name:        req.body.name,
+        name:         req.body.name,
         description:  req.body.description,
         manufacturer: req.body.manufacturer,
         mainPepper:   req.body.mainPepper,
         heat:         req.body.heat
       };
-      console.log(req.body);
-      console.log(sauce);
     }
     
     Sauce.updateOne({_id: req.params.id}, sauce).then(
